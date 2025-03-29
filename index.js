@@ -1,13 +1,25 @@
-import express from "express";
-import fetch from 'node-fetch'; // Untuk Node.js versi lama
-// atau langsung gunakan fetch tanpa import untuk Node.js terbaru
-import "./innocent.js";  // Jalankan innocent.js
+const express = require('express');
+const { exec } = require('child_process');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-    res.send("Bot sedang berjalan...");
+// Jalankan innocent.js saat server dimulai
+exec('node innocent.js', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error menjalankan innocent.js: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.error(`Error: ${stderr}`);
+        return;
+    }
+    console.log(`innocent.js Output: ${stdout}`);
+});
+
+// Endpoint untuk web service (agar tetap hidup di Render/UptimeRobot)
+app.get('/', (req, res) => {
+    res.send('Bot WhatsApp Aktif!');
 });
 
 app.listen(PORT, () => {
