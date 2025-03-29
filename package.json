@@ -9,6 +9,7 @@
     "dependencies": {
         "@whiskeysockets/baileys": "github:xjunznaire/pkg-baileys",
         "axios": "^1.6.0",
+        "node-fetch": "^2.6.1",
         "body-parser": "^1.20.3",
          "fs": "latest",
         "chalk": "^4.1.2",
