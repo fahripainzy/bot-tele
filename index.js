@@ -11,4 +11,4 @@ app.listen(PORT, () => {
   console.log(`Server berjalan di port ${PORT}`);
 });
 
-start("main.js");
+start("innocent.js");
