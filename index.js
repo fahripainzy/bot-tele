@@ -1,4 +1,6 @@
 import express from "express";
+import fetch from 'node-fetch'; // Untuk Node.js versi lama
+// atau langsung gunakan fetch tanpa import untuk Node.js terbaru
 import "./innocent.js";  // Jalankan innocent.js
 
 const app = express();
