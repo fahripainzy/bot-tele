@@ -4,7 +4,7 @@
     "description": "innocent",
     "main": "innocent.js",
     "scripts": {
-        "start": "node innocent.js"
+        "start": "node index.js"
     },
     "dependencies": {
         "@whiskeysockets/baileys": "github:xjunznaire/pkg-baileys",
