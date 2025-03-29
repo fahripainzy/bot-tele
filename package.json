@@ -1,6 +1,5 @@
 {
     "name": "INNOCENT-ZERO",
-    "type": "module",
     "version": "1.0",
     "description": "innocent",
     "main": "innocent.js",
