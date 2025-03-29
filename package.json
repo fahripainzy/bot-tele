@@ -2,7 +2,6 @@
     "name": "INNOCENT-ZERO",
     "version": "1.0",
     "description": "innocent",
-    "type": "module",
     "main": "innocent.js",
     "scripts": {
         "start": "node index.js"
